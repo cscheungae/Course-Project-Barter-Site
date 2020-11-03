@@ -1,10 +1,13 @@
-# node-react-starter
-A simple fullstack starter application using Node.js, Express.js, React.js and MongoDB
+# Comp4021 Project - Barter Village
 
-To run this project you need to add the backend and frontend dependencies.
-In the root of the project run the following command
+This is an web application to allow people to exchange unsed items. In this project, Node.js, Express.js, React.js and MongoDB were used.
 
+### Demo video
+View the video in [YouTube](https://youtu.be/GSZh1M_F2uI)
+
+### Clone the project
 ```
+$ git clone https://github.com/cscheungae/comp4021ProjBarterVillage.git
 $ npm install
 ```
 
@@ -23,7 +26,7 @@ npm install
 
 *To run this application, you must have MongoDB up and running*
 
-To run the application, use the following command:
+To run the application, navigate to the root directory of the project and use the following command:
 
 ```
 $ npm run dev
