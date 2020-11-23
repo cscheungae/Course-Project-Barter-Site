@@ -1,4 +1,4 @@
-# Comp4021 Project - Barter Village
+# Comp4021 Project - exchange-unused-items
 
 This is an web application to allow people to exchange unused items. In this project, Node.js, Express.js, React.js and MongoDB were used.
 
