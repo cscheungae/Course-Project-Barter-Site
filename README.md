@@ -23,6 +23,7 @@ npm install
 ```
 
 ### Running the application
+#### Important: As the mongodb instance was closed, the following command will not work.
 
 *To run this application, you must have MongoDB up and running*
 
