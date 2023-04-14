@@ -41,12 +41,10 @@ module.exports = (app) => {
     /// OUTPUT: Send true 200 when success send 401 when unautorized
     app.post('/user/login', async (req, res) => {
         const { name, password, phone } = req.body;
-        console.log(`name: ${name}, password: ${password}, phone: ${phone}`);
         // get the user from the mondodb
         let userIdentity = await User.findOne({ name: name, phone: phone });
         // compare the password
-        console.log(`userIdentity: ${userIdentity}`);
-        bcrypt.compare(password, userIdentity.password, (err, result) => {
+        bcrypt.compare(password, userIdentity?.password ?? null, (err, result) => {
             if (result == true) {
                 return res.status(200).send({ message: "authorized" });
             } else {

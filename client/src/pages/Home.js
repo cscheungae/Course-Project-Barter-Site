@@ -12,7 +12,7 @@ const Home = () => {
     const handleShow = () => setShow(true);
 
     useEffect(() => {
-        requestItems(() => console.log('requestItems() called.'));
+        requestItems(() => {});
     }, []);
 
     const handleWant = async (name, phone, itemId) => {

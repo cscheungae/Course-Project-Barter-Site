@@ -6,6 +6,7 @@ import {
   Redirect
 } from "react-router-dom";
 import './App.css';
+import { ToastContainer } from 'react-toastify';
 
 // pages
 import Home from './pages/Home';
@@ -22,9 +23,12 @@ import AuthContextProvider, { AuthContext } from "./context/AuthContext";
 import UserContextProvider from './context/UserContext';
 import ItemContextProvider from "./context/ItemContext";
 
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
   return (
     <div className="App bg">
+      <ToastContainer />
       <Router>
         <UserContextProvider>
           <AuthContextProvider>
@@ -32,10 +36,10 @@ function App() {
               <NavBar />
 
               <Switch>
-                // public route
+                {/* // public route */}
                 <Route path="/login"><LoginPanel /></Route>
                 <Route path="/reg"><RegisterPanel /></Route>
-                // private routes
+                {/* // private routes */}
                 <PrivateRoute path="/" exact>
                   <Home />
                 </PrivateRoute>

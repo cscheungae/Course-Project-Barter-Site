@@ -37,9 +37,6 @@ module.exports = (app) => {
                 for (let k = 0; k < buyerItems.length; k++) {
                     let buyerItem = buyerItems[k];
                     if (buyerItem.buyers.filter(user => (user.name == owner.name && user.phone == owner.phone)).length > 0) {
-                        console.log("match foounfound");
-                        console.log(`ownerItem: ${ownerItem}`);
-                        console.log(`buyerItem: ${buyerItem}`);
                         let simplifiedOwnerItem = _.cloneDeep(ownerItem);
                         simplifiedOwnerItem.buyers = undefined;     // remove the uncessary parts for cleaner output
                         let simplifiedBuyerItem = _.cloneDeep(buyerItem);

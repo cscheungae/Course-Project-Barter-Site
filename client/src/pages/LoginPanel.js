@@ -3,14 +3,18 @@ import {
     useHistory,
     useLocation
 } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 import { AuthContext } from "../context/AuthContext";
 import { UserContext } from '../context/UserContext';
+
+
 
 const LoginPanel = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [phone, setPhone] = useState("");
+    const errorNotify = (str) => toast.error(str);
 
     let history = useHistory();
     let location = useLocation();
@@ -24,6 +28,8 @@ const LoginPanel = () => {
             setNameCache(username);
             setPhoneCache(phone);
             history.replace(from);
+        }, (e) => {
+            errorNotify(e.message)
         });
     };
 

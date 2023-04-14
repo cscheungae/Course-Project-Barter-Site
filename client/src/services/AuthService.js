@@ -12,8 +12,12 @@ export default {
     },
     login: async (identity) => {
         const { username, password, phone } = identity;
-        let res = await axios.post('/user/login', { name: username, password, phone });
-        if (res.status === 200) return true;
-        else return false;
+        try {
+            let res = await axios.post('/user/login', { name: username, password, phone });
+            if (res.status === 200) return true;
+            else return false;
+        } catch(err) {
+            return err; 
+        }
     },
 }

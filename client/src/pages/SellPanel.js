@@ -14,8 +14,6 @@ const SellPanel = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         const form = event.currentTarget;
-        // console.log(`form.name: ${form.name.value}`);
-        // console.log(`form.description: ${form.description.value}`);
         await sellItem({
             userIdentity: { name, phone },
             productInfo: {
