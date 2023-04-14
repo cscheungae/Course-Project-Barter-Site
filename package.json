@@ -2,7 +2,7 @@
   "name": "node-react-starter",
   "version": "1.0.0",
   "description": "",
-  "main": "build",
+  "main": "build/index.js",
   "source": "index.js",
   "scripts": {
     "preinstall": "npm --prefix ./client install",
