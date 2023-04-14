@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000",
+  "proxy": "http://localhost:5050",
   "dependencies": {
     "axios": "^0.19.0",
     "bcryptjs": "^2.4.3",
@@ -11,15 +11,17 @@
     "http-proxy-middleware": "^0.19.1",
     "node-pre-gyp": "^0.14.0",
     "react": "^16.8.6",
+    "react-app-rewired": "^2.2.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.1"
+    "react-scripts": "^3.4.1",
+    "react-toastify": "^9.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -36,6 +38,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {}
+  }
 }
